@@ -11,6 +11,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title><tiles:insertAttribute name="title"/></title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            #main-wrapper{
+                width: 80%;
+                margin: 0 auto;
+            }
+        </style>
     </head>
     <body>
 	
