@@ -6,17 +6,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HomeController {
+
     @RequestMapping("/*")
-    public String testView(){
-	return "home";
+    public String testView() {
+        return "home";
     }
+
     @RequestMapping("/password")
-    public String passView(){
+    public String passView() {
         return "usersettings";
     }
-    
-    @RequestMapping("/test")
-    public String test2View(){
-	return "testPage";
+
+    @RequestMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    @RequestMapping("/passwordReset")
+    public String forgotPassword() {
+        return "passwordReset";
     }
 }

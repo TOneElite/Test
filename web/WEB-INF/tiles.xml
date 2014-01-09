@@ -7,19 +7,23 @@
 <tiles-definitions>
     
     <definition name="template" template="/WEB-INF/tiles/template.jsp">
-	<put-attribute name="title" value="Template"/>
-	<put-attribute name="body" value="/WEB-INF/tiles/body.jsp"/>
-	<put-attribute name="banner" value="/WEB-INF/tiles/banner.jsp"/>
-	<put-attribute name="navigation" value="/WEB-INF/tiles/navigation.jsp"/>
-	<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"/>
+        <put-attribute name="title" value="Template"/>
+        <put-attribute name="body" value="/WEB-INF/tiles/body.jsp"/>
+        <put-attribute name="banner" value="/WEB-INF/tiles/banner.jsp"/>
+        <put-attribute name="navigation" value="/WEB-INF/tiles/navigation.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"/>
     </definition>
     
-    <definition name="test" template="/WEB-INF/tiles/test.jsp">
-	<put-attribute name="body" />
+    <definition name="welcome" template="/WEB-INF/jsp/welcome.jsp">
+        <put-attribute name="body" />
     </definition>
     
-    <definition name="testPage" extends="test">
-	<put-attribute name="body" value="/WEB-INF/jsp/testPage.jsp"/>
+    <definition name="login" extends="welcome">
+        <put-attribute name="login" value="/WEB-INF/jsp/login.jsp"/>
+    </definition>
+    
+    <definition name="passwordReset" extends="welcome">
+        <put-attribute name="passwordReset" value="/WEB-INF/jsp/passwordReset.jsp"/>
     </definition>
     
     <definition name="home" extends="template">
