@@ -47,6 +47,7 @@ public class Konfigurasjon extends WebMvcConfigurationSupport  {
         vareJDBCTemplate.setDataSource(dataSource());
         return vareJDBCTemplate;
     }
+    */
     
     @Override
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
@@ -60,7 +61,6 @@ public class Konfigurasjon extends WebMvcConfigurationSupport  {
         handlerMapping.setOrder(-1);
         return handlerMapping;
     }
-    */
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
