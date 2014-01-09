@@ -10,9 +10,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        
+
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div id="login">
+            <img src="<c:url value="/res/histlogo.png"/>" alt="HiST" height="94" width="98">
+        </div>
+        Is here
     </body>
 </html>
