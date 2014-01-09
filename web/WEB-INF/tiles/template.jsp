@@ -16,11 +16,16 @@
                 margin:0;
                 padding:0;
             }
+	    
+	    body{
+		background-color: #fcf8ee;
+	    }
+	    
             #main-wrapper{
-                width: 80%;
+                width: 78%;
                 margin: 0 auto;
 		margin-top: 1%;
-                border: 1px solid black;
+		padding: 1%;
             }
             *{
                 margin: 0;
@@ -49,15 +54,11 @@
 
 
             #queueHeader{
-                width: 64%;
-                height: 100px;
                 background-color: #f3ede1;
-                padding-left: 10px; 
-                padding-right: 10px;
-                padding-top: 7px;
-                padding-bottom: 7px;
+		padding: 2%;
                 text-align: left;    
                 margin-bottom: 15px;
+		overflow: hidden;
             }
 
             #queueInfo{
@@ -70,7 +71,6 @@
 
             #queue{
                 clear: both;
-                width: 65%;
                 height: 650px;
                 font-family: arial;
                 overflow-y: auto;
@@ -113,9 +113,26 @@
 		background-color: #f3ede1;
 		margin-top: 1%;
 	    }
+	    
 	    #footer p{
 		padding-top: 1%;
 		padding-bottom: 1%;
+	    }
+	    
+	    #navigation{
+		width: 18%;
+		padding: 1%;
+		background-color: #f3ede1;
+		float: left;
+	    }
+	    #navigation ul{
+		list-style: none;
+		margin-left: 8%;
+	    }
+	    
+	    #main-body{
+		float: right;
+		width: 78%;
 	    }
         </style>
     </head>
@@ -137,18 +154,14 @@
                     <tiles:insertAttribute name="navigation"/>
                 </nav>
 
-                <!-- Settings tile here -->
-                <nav id="settings">
-
-                </nav>
-
             </aside>
 
             <!-- Main body tiles here -->
             <section id="main-body">
                 <tiles:insertAttribute name="body"/>
             </section>
-
+	    
+	    <br clear="both"/>
         </div>
 
         <!-- Footer tile here -->
