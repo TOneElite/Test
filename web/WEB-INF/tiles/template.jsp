@@ -73,7 +73,7 @@
                 clear: both;
                 height: 650px;
                 font-family: arial;
-                overflow-y: auto;
+                overflow-y: scroll;
             }
 
             #queueTable{
