@@ -1,4 +1,4 @@
-
+<!--
 <section id="queueHeader">
     <div id="queueInfo">                         
         <h1>Øvinger i Matematikk 2</h1>
@@ -8,6 +8,18 @@
 
     <div id="queueButtons">         
         <input type="button" value="Stå i kø" name="getInLine"/>
+    </div>
+</section>
+-->
+<section id="queueHeader">
+    <div id="queueInfo">                         
+        <h1>Øvinger i Matematikk 2</h1>
+        <p>1 <span id="mandatory">2</span> <span id="accepted">3 4 5</span> 6 7 8 9 10 <span id="mandatory"><span id="accepted">11</span></span> 12 13 14 15 16 17 18 19</p>
+    </div>
+
+
+    <div>         
+        <a href="#" id="queueButton">Stå i kø</a>
     </div>
 </section>
 

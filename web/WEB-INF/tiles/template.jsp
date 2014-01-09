@@ -27,10 +27,6 @@
 		margin-top: 1%;
 		padding: 1%;
             }
-            *{
-                margin: 0;
-                padding: 0;
-            }
             #banner{
                 padding: 1% 6%;
                 background-color: #f3ede1;
@@ -50,6 +46,7 @@
                 font-size: 4em;
                 font-family: "mekanik let", arial;
                 display: inline;
+                margin-left: 2%;
             }
 
 
@@ -64,9 +61,42 @@
             #queueInfo{
                 float: left;
             }
+            #queueInfo p{
+                font-size: 1em; 
+                font-family: courier;
+                font-weight: bold;
+            }
+            #queueInfo #accepted{
+                background-color: #90ff46;
+            }
+            #queueInfo #mandatory{
+                text-decoration: underline;
+            }
 
-            #queueButtons{
-                float: right; 
+            #queueButton {
+                float: right;
+                background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccccff), color-stop(1, #9999ff));
+                background:-moz-linear-gradient(center top, #63b8ee 5%, #468ccf 100%);
+                background-color:#9999ff;
+                text-indent:0;
+                border:1px solid #3866a3;
+                color:#14396a;
+                font-family:Arial;
+                font-size:1em;
+                font-weight:bold;
+                height:40px;
+                line-height:40px;
+                width:120px;
+                text-decoration:none;
+                text-align:center;
+            }
+            #queueButton:hover {
+                background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
+                background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
+                background-color:#468ccf;
+            }#queueButton:active {
+                position:relative;
+                top:1px;
             }
 
             #queue{
