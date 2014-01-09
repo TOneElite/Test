@@ -14,6 +14,14 @@
 	<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"/>
     </definition>
     
+    <definition name="test" template="/WEB-INF/tiles/test.jsp">
+	<put-attribute name="body" />
+    </definition>
+    
+    <definition name="testPage" extends="test">
+	<put-attribute name="body" value="/WEB-INF/jsp/testPage.jsp"/>
+    </definition>
+    
     <definition name="home" extends="template">
         <put-attribute name="title" value="Home"/>
         <put-attribute name="body" value="/WEB-INF/jsp/home.jsp"/>

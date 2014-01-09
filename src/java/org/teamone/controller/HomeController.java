@@ -14,4 +14,9 @@ public class HomeController {
     public String passView(){
         return "usersettings";
     }
+    
+    @RequestMapping("/test")
+    public String test2View(){
+	return "testPage";
+    }
 }
