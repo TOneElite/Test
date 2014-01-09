@@ -1,1 +1,1 @@
-FOOTER
+<p>&copy;Copyright TeamOne</p>
