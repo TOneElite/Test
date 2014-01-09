@@ -19,6 +19,7 @@
             #main-wrapper{
                 width: 80%;
                 margin: 0 auto;
+		margin-top: 1%;
                 border: 1px solid black;
             }
             *{
@@ -107,6 +108,15 @@
                 height: 30px;
             }
             
+	    #footer{
+		text-align: center;
+		background-color: #f3ede1;
+		margin-top: 1%;
+	    }
+	    #footer p{
+		padding-top: 1%;
+		padding-bottom: 1%;
+	    }
         </style>
     </head>
     <body>
