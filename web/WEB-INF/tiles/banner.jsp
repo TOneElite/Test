@@ -7,6 +7,6 @@
     <div id="info">
         <a href="">Øystein Huseby</a></br>
         <a href="" class="link">Bytt passord</a>
-        <a href="" class="link">Logg ut</a>
+        <a href="test" class="link">Logg ut</a>
     </div>
 </header>
