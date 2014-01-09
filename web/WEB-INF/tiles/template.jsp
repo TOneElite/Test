@@ -19,45 +19,70 @@
             #main-wrapper{
                 width: 80%;
                 margin: 0 auto;
+		border: 1px solid black;
             }
+	    *{
+		margin: 0;
+		padding: 0;
+	    }
+	    #banner{
+		padding: 1% 6%;
+		background-color: #f3ede1;
+	    }
+	    .link{
+		font-size: 0.8em;
+	    }
+
+	    #info{
+		float:right;
+		overflow: hidden;
+		font-size: 1.5em;
+		text-align: right;
+		margin-top: 45px;
+	    }
+	    .logo{
+		font-size: 4em;
+		font-family: "mekanik let", arial;
+		display: inline;
+	    }
         </style>
     </head>
     <body>
-	
+
 	<!-- Banner tile here -->
 	<header id="banner">
 	    <tiles:insertAttribute name="banner"/>
 	</header>
-	
+
 	<!-- The wrapper contains all main page tiles. This is for formating the with of the entire site -->
         <div id="main-wrapper">
 
 	    <!-- Navigation an settings tiles here -->
 	    <aside id="side-menu">
-		
+
 		<!-- Navigation tile here -->
 		<nav id="navigation">
 		    <tiles:insertAttribute name="navigation"/>
 		</nav>
-		
+
 		<!-- Settings tile here -->
 		<nav id="settings">
-		    
+
 		</nav>
-		
+
 	    </aside>
 
 	    <!-- Main body tiles here -->
 	    <section id="main-body">
 		<tiles:insertAttribute name="body"/>
 	    </section>
-	    
+
 	</div>
-	
+
 	<!-- Footer tile here -->
 	<footer id="footer">
 	    <tiles:insertAttribute name="footer"/>
 	</footer>
-	
+
     </body>
 </html>
