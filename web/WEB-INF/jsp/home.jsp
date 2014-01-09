@@ -11,6 +11,8 @@
     </div>
 </section>
 -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
 <section id="queueHeader">
     <div id="queueInfo">                         
         <h1>Øvinger i Matematikk 2</h1>
@@ -21,6 +23,20 @@
     <div>         
         <a href="#" id="queueButton">Stå i kø</a>
     </div>
+
+    <div class="queueContainer">
+        <br><br><br>
+        <div class="queueRulesHeader"><span>Regler for øvingene &#x25BC</span>
+
+        </div>
+        <div class="queueRulesContent">
+            <p>
+                Bacon ipsum dolor sit amet salami turkey fatback andouille biltong short loin prosciutto swine shoulder. Strip steak meatloaf ball tip cow. Ham hock beef ribs frankfurter doner. Kevin jowl spare ribs, sirloin chuck drumstick cow swine. Drumstick tongue pancetta, meatloaf sausage jerky pig kevin tenderloin doner spare ribs shankle pork beef ribs.
+                Bacon ipsum dolor sit amet salami turkey fatback andouille biltong short loin prosciutto swine shoulder. Strip steak meatloaf ball tip cow. Ham hock beef ribs frankfurter doner. Kevin jowl spare ribs, sirloin chuck drumstick cow swine. Drumstick tongue pancetta, meatloaf sausage jerky pig kevin tenderloin doner spare ribs shankle pork beef ribs.
+            </p>
+        </div>
+    </div>
+
 </section>
 
 <section id="queue">
@@ -66,25 +82,21 @@
     </table>
 </section>
 
-<!--
 <script language="javascript">
-    $(function() {
+    $(".queueRulesHeader").click(function() {
 
-        // if the function argument is given to overlay,
-        // it is assumed to be the onBeforeLoad event listener
-        $("a[rel]").overlay({
-            mask: 'darkred',
-            effect: 'apple',
-            onBeforeLoad: function() {
-
-                // grab wrapper element inside content
-                var wrap = this.getOverlay().find(".contentWrap");
-
-                // load the page specified in the trigger
-                wrap.load(this.getTrigger().attr("href"));
-            }
-
+        $queueRulesHeader = $(this);
+        //getting the next element
+        $queueRulesContent = $queueRulesHeader.next();
+        //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+        $queueRulesContent.slideToggle(500, function() {
+            //execute this after slideToggle is done
+            //change text of header based on visibility of content div
+            $queueRulesHeader.text(function() {
+                //change text based on condition
+                return $queueRulesContent.is(":visible") ? "Regler for øvingene" : "Regler for øvingene";
+            });
         });
     });
-</script> -->
+</script> 
 

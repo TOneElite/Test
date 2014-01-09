@@ -16,16 +16,16 @@
                 margin:0;
                 padding:0;
             }
-	    
-	    body{
-		background-color: #fcf8ee;
-	    }
-	    
+
+            body{
+                background-color: #fcf8ee;
+            }
+
             #main-wrapper{
                 width: 78%;
                 margin: 0 auto;
-		margin-top: 1%;
-		padding: 1%;
+                margin-top: 1%;
+                padding: 1%;
             }
             #banner{
                 padding: 1% 6%;
@@ -52,10 +52,10 @@
 
             #queueHeader{
                 background-color: #f3ede1;
-		padding: 2%;
+                padding: 2%;
                 text-align: left;    
                 margin-bottom: 15px;
-		overflow: hidden;
+                overflow: hidden;
             }
 
             #queueInfo{
@@ -99,6 +99,25 @@
                 top:1px;
             }
 
+            .queueContainer {
+                //height: 100px;
+                width:100%;
+                //border:1px solid #d3d3d3;
+            }
+            .queueContainer div {
+                width:100%;
+            }
+            .queueContainer .queueRulesHeader {
+                //background-color:#d3d3d3;
+                padding: 2px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .queueContainer .queueRulesContent {
+                display: none;
+                padding : 5px;
+            }
+
             #queue{
                 clear: both;
                 height: 650px;
@@ -137,33 +156,33 @@
             #queueTable td{
                 height: 30px;
             }
-            
-	    #footer{
-		text-align: center;
-		background-color: #f3ede1;
-		margin-top: 1%;
-	    }
-	    
-	    #footer p{
-		padding-top: 1%;
-		padding-bottom: 1%;
-	    }
-	    
-	    #navigation{
-		width: 18%;
-		padding: 1%;
-		background-color: #f3ede1;
-		float: left;
-	    }
-	    #navigation ul{
-		list-style: none;
-		margin-left: 8%;
-	    }
-	    
-	    #main-body{
-		float: right;
-		width: 78%;
-	    }
+
+            #footer{
+                text-align: center;
+                background-color: #f3ede1;
+                margin-top: 1%;
+            }
+
+            #footer p{
+                padding-top: 1%;
+                padding-bottom: 1%;
+            }
+
+            #navigation{
+                width: 18%;
+                padding: 1%;
+                background-color: #f3ede1;
+                float: left;
+            }
+            #navigation ul{
+                list-style: none;
+                margin-left: 8%;
+            }
+
+            #main-body{
+                float: right;
+                width: 78%;
+            }
         </style>
     </head>
     <body>
@@ -190,8 +209,8 @@
             <section id="main-body">
                 <tiles:insertAttribute name="body"/>
             </section>
-	    
-	    <br clear="both"/>
+
+            <br clear="both"/>
         </div>
 
         <!-- Footer tile here -->
