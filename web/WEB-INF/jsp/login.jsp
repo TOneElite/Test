@@ -5,27 +5,16 @@
     *{
 	margin:0;
 	padding:0;
+        
     }
 
     #login{
-	text-align: center;
-	margin-top: 15%;
+        display: inline-block;
+        text-align: left;
     }
-
-    #login hlink{
-	float:right;
-    }
-
-    .logo{
-	font-size: 4em;
-	font-family: "mekanik let", arial;
-	display: inline;
-    }
-
 </style>
 <div id="login">
-    <img src="<c:url value="/res/histlogo.png"/>" alt="HiST" height="94" width="98">
-    <div class="logo">SKS 2.0</div><br>
+    
     <form action="http://localhost:8084/TestSKS/">
 	<input type="email" name="email" value="E-Post">
 	<a href="<c:url value="/passwordReset" />">Reset password</a><br>
