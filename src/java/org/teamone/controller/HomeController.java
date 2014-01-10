@@ -54,4 +54,8 @@ public class HomeController {
 	model.addAttribute("subjects", subjectJDBCTemplate.listSubjects());
 	return "testDatabase2";
     }
+    @RequestMapping("/eksamensrapport")
+    public String examOverview(){
+        return "eksamensrapport";
+    }
 }
