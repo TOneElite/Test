@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 import org.springframework.web.servlet.handler.AbstractHandlerMapping;
 import org.springframework.web.servlet.view.tiles2.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles2.TilesViewResolver;
+import org.teamone.domain.QueueJDBCTemplate;
 import org.teamone.domain.UserJDBCTemplate;
 import org.teamone.domain.SubjectJDBCTemplate;
 
@@ -54,6 +55,13 @@ public class Konfigurasjon extends WebMvcConfigurationSupport {
         SubjectJDBCTemplate subjectJDBCTemplate = new SubjectJDBCTemplate();
         subjectJDBCTemplate.setDataSource(dataSource());
         return subjectJDBCTemplate;
+    }
+    
+    @Bean
+    public QueueJDBCTemplate queueJDBCTemplate() {
+        QueueJDBCTemplate queueJDBCTemplate = new QueueJDBCTemplate();
+        queueJDBCTemplate.setDataSource(dataSource());
+        return queueJDBCTemplate;
     }
 
     @Override
