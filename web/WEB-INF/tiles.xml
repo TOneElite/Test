@@ -30,6 +30,9 @@
     <definition name="testDatabase" extends="databaseTest">
         <put-attribute name="body"   value="/WEB-INF/jsp/testDatabase.jsp"/>      
     </definition>
+    <definition name="testDatabase2" extends="databaseTest">
+        <put-attribute name="body"   value="/WEB-INF/jsp/testDatabase2.jsp"/>      
+    </definition>
     
     <definition name="queueOverlay" extends="overlaying">
         <put-attribute name="title"  value="The Product Store"/>
