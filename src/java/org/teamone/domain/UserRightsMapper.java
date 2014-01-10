@@ -18,7 +18,7 @@ public class UserRightsMapper implements RowMapper<UserRights> {
     public UserRights mapRow(ResultSet rs, int i) throws SQLException {
         UserRights userRight = new UserRights();
         
-		
+		// Her blir det fest :(
 		// userRight.setCode(rs.getString("subject_code"));
         // userRight.setName(rs.getString("name"));
         
