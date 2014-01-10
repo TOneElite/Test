@@ -6,7 +6,6 @@
 <!-- the NewContact Screen -->
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="resources/css/styles2.css"/>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <title> Stå i kø</title>
     </head>
@@ -35,7 +34,7 @@
                     <label class="queueFormLabel" for="task">Velg øving:</label> 
                     <ul class="right">
                         <li><label class="checkboxLabel">Øving 1<input type="checkbox" name="task" value="Øving 1"></label></li>
-                        <li><label class="checkboxLabel">Øving 2<input type="checkbox" name="task" value="Øving 2"></label></li>
+                        <li><label class="checkboxLabel">Øving 2<input type="checkbox" name="task" value="Øving 2" checked></label></li>
                         <li><label class="checkboxLabel">Øving 3<input type="checkbox" name="task" value="Øving 3"></label></li>
                         <li><label class="checkboxLabel">Øving 14<input type="checkbox" name="task" value="Øving 14"></label></li>
                         <li><label class="checkboxLabel">Øving 15<input type="checkbox" name="task" value="Øving 15"></label></li>
