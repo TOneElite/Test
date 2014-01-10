@@ -20,7 +20,7 @@ public class UserJDBCTemplate {
 	return user;
     }
     
-    public List<User> listUser(){
+    public List<User> listUsers(){
 	String SQL = "";
 	List<User> user = jdbcTemplateOjbect.query(SQL, new UserMapper());
 	return user;
