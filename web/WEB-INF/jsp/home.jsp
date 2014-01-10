@@ -11,7 +11,9 @@
     </div>
 </section>
 -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
 
 <section id="queueHeader">
     <div id="queueInfo">                         
@@ -21,7 +23,14 @@
 
 
     <div>         
-        <a href="#" id="queueButton">Stå i kø</a>
+        <a href="<c:url value="queueOverlay.htm"/>" rel="#overlay">
+            <button id="queueButton" type="button">Stå i kø</button>
+        </a>
+    </div>
+
+    <div class="apple_overlay" id="overlay">
+        <div class="queueContentWrap">            
+        </div>
     </div>
 
     <div class="queueContainer">
@@ -96,6 +105,25 @@
                 //change text based on condition
                 return $queueRulesContent.is(":visible") ? "Regler for øvingene" : "Regler for øvingene";
             });
+        });
+    });
+
+    $(function() {
+
+        // if the function argument is given to overlay,
+        // it is assumed to be the onBeforeLoad event listener
+        $("a[rel]").overlay({
+            mask: 'lightgrey',
+            effect: 'apple',
+            onBeforeLoad: function() {
+
+                // grab wrapper element inside content
+                var wrap = this.getOverlay().find(".queueContentWrap");
+
+                // load the page specified in the trigger
+                wrap.load(this.getTrigger().attr("href"));
+            }
+
         });
     });
 </script> 

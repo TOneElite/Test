@@ -99,6 +99,96 @@
                 top:1px;
             }
 
+
+            #overlay {
+                //position: absolute;
+                // background-image: url(http://jquerytools.org/media/img/overlay/transparent.png);
+
+                //color:#efefef;
+                //height:900px;
+            }
+
+
+            div.queueContentWrap {
+                //height:900px;
+            }
+
+            .apple_overlay {
+                display:none;
+                background-image:url(http://jquerytools.org/media/img/overlay/white.png);
+                width:940px;
+                padding:35px;
+                //font-size:11px; //setsthewhiteframe
+            }
+
+            .apple_overlay .close {
+                background-image:url(http://jquerytools.org/media/img/overlay/close.png);
+                position:absolute; right:5px; top:5px;
+                cursor:pointer;
+                height:35px;
+                width:35px;
+            }
+
+            #queueForm{
+                width: 500px;
+                height: 900px;
+                padding: 20px;
+            }
+
+            #queueFormForm{
+                float: left;
+            }
+
+            #queueForm .queueFormLabel{
+                display: inline-block; 
+                width: 95px;
+            }
+
+            .right{
+                display: inline-block;
+            }
+
+            #queueForm form select{
+                width: 150px;
+            }
+
+            #queueForm #comment{
+                width: 246px;
+                height: 50px;    
+            }
+
+            #queueForm ul{ 
+                border:2px solid #ccc;  
+                height: 100px; 
+                overflow-y: auto; 
+                text-align: right;
+                list-style-type: none;
+                width: 105.5px;
+                vertical-align: top;
+                margin: 0px;
+            }
+
+            #queueFormMap{
+                float: right;
+                width: 200px;
+                height: 200px;
+                padding: 4px;
+                border: 1px solid;
+            }
+
+            #queueFormMap #queueFormThemap{
+                height: 100%;
+                width: auto;
+            }
+
+            #queueFormGroupMembers{
+                float: right;
+            }
+
+            .highlight{ 
+                background-color: lightblue; 
+            }
+
             .queueContainer {
                 //height: 100px;
                 width:100%;

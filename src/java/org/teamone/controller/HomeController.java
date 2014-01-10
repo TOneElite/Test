@@ -26,4 +26,9 @@ public class HomeController {
     public String forgotPassword() {
         return "passwordReset";
     }
+
+    @RequestMapping(value = "queueOverlay.htm")
+    public String overlay() {
+        return "queueOverlay";
+    }
 }
