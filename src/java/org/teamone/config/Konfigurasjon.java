@@ -12,6 +12,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 import org.springframework.web.servlet.handler.AbstractHandlerMapping;
 import org.springframework.web.servlet.view.tiles2.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles2.TilesViewResolver;
+import org.teamone.domain.PersonJDBCTemplate;
+import org.teamone.domain.SubjectJDBCTemplate;
 
 @Configuration
 @EnableWebMvc  // mvc annotation
@@ -30,17 +32,17 @@ public class Konfigurasjon extends WebMvcConfigurationSupport  {
         tilesViewResolver.setOrder(2);
         return tilesViewResolver;
     }
-    /*
+    
     @Bean
     public DriverManagerDataSource dataSource(){
-        String url = "linkDB";
-        String username = "username";
-        String password = "passord";
+        String url = "jdbc:mysql://mysql.stud.aitel.hist.no:3306/14-ing2-t1";
+        String username = "14-ing2-t1";
+        String password = "3EFmbAU";
         DriverManagerDataSource dmds = new DriverManagerDataSource(url, username, password);
         dmds.setDriverClassName("com.mysql.jdbc.Driver");
         return dmds;
     }
-    
+    /*
     @Bean
     public VareJDBCTemplate vareJDBCTemplate(){
         VareJDBCTemplate vareJDBCTemplate = new VareJDBCTemplate();
@@ -48,6 +50,20 @@ public class Konfigurasjon extends WebMvcConfigurationSupport  {
         return vareJDBCTemplate;
     }
     */
+    
+    @Bean
+    public PersonJDBCTemplate personJDBCTemplate(){
+	PersonJDBCTemplate personJDBCTemplate = new PersonJDBCTemplate();
+	personJDBCTemplate.setDataSource(dataSource());
+	return personJDBCTemplate;
+    }
+    
+    @Bean
+    public SubjectJDBCTemplate subjectJDBCTemplate(){
+	SubjectJDBCTemplate subjectJDBCTemplate = new SubjectJDBCTemplate();
+	subjectJDBCTemplate.setDataSource(dataSource());
+	return subjectJDBCTemplate;
+    }
     
     @Override
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {

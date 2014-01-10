@@ -16,20 +16,16 @@
                 margin:0;
                 padding:0;
             }
-	    
-	    body{
-		background-color: #fcf8ee;
-	    }
-	    
+
+            body{
+                background-color: #fcf8ee;
+            }
+
             #main-wrapper{
                 width: 78%;
                 margin: 0 auto;
-		margin-top: 1%;
-		padding: 1%;
-            }
-            *{
-                margin: 0;
-                padding: 0;
+                margin-top: 1%;
+                padding: 1%;
             }
             #banner{
                 padding: 1% 6%;
@@ -50,23 +46,166 @@
                 font-size: 4em;
                 font-family: "mekanik let", arial;
                 display: inline;
+                margin-left: 2%;
             }
 
 
             #queueHeader{
                 background-color: #f3ede1;
-		padding: 2%;
+                padding: 2%;
                 text-align: left;    
                 margin-bottom: 15px;
-		overflow: hidden;
+                overflow: hidden;
             }
 
             #queueInfo{
                 float: left;
             }
+            #queueInfo p{
+                font-size: 1em; 
+                font-family: courier;
+                font-weight: bold;
+            }
+            #queueInfo #accepted{
+                background-color: #90ff46;
+            }
+            #queueInfo #mandatory{
+                text-decoration: underline;
+            }
 
-            #queueButtons{
-                float: right; 
+            #queueButton {
+                float: right;
+                background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccccff), color-stop(1, #9999ff));
+                background:-moz-linear-gradient(center top, #63b8ee 5%, #468ccf 100%);
+                background-color:#9999ff;
+                text-indent:0;
+                border:1px solid #3866a3;
+                color:#14396a;
+                font-family:Arial;
+                font-size:1em;
+                font-weight:bold;
+                height:40px;
+                line-height:40px;
+                width:120px;
+                text-decoration:none;
+                text-align:center;
+            }
+            #queueButton:hover {
+                background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #468ccf), color-stop(1, #63b8ee) );
+                background:-moz-linear-gradient( center top, #468ccf 5%, #63b8ee 100% );
+                background-color:#468ccf;
+            }#queueButton:active {
+                position:relative;
+                top:1px;
+            }
+
+
+            #overlay {
+                /*position: absolute;
+                /*background-image: url(http://jquerytools.org/media/img/overlay/transparent.png);*/
+
+                /*color:#efefef;*/
+                /*height:900px;*/
+            }
+
+
+            div.queueContentWrap {
+                /*height:900px;*/
+            }
+
+            .apple_overlay {
+                display:none;
+                background-image:url(http://jquerytools.org/media/img/overlay/white.png);
+                width:940px;
+                padding:35px;
+                /*font-size:11px; //setsthewhiteframe*/
+            }
+
+            .apple_overlay .close {
+                background-image:url(http://jquerytools.org/media/img/overlay/close.png);
+                position:absolute; right:5px; top:5px;
+                cursor:pointer;
+                height:35px;
+                width:35px;
+            }
+
+            #queueForm{
+                width: 500px;
+                height: 900px;
+                padding: 20px;
+            }
+
+            #queueFormForm{
+                float: left;
+            }
+
+            #queueForm .queueFormLabel{
+                display: inline-block; 
+                width: 95px;
+            }
+
+            .right{
+                display: inline-block;
+            }
+
+            #queueForm form select{
+                width: 150px;
+            }
+
+            #queueForm #comment{
+                width: 246px;
+                height: 50px;    
+            }
+
+            #queueForm ul{ 
+                border:2px solid #ccc;  
+                height: 100px; 
+                overflow-y: auto; 
+                text-align: right;
+                list-style-type: none;
+                width: 105.5px;
+                vertical-align: top;
+                margin: 0px;
+            }
+
+            #queueFormMap{
+                float: right;
+                width: 200px;
+                height: 200px;
+                padding: 4px;
+                border: 1px solid;
+            }
+
+            #queueFormMap #queueFormThemap{
+                height: 100%;
+                width: auto;
+            }
+
+            #queueFormGroupMembers{
+                float: right;
+            }
+
+            .highlight{ 
+                background-color: lightblue; 
+            }
+
+            .queueContainer {
+                /*height: 100px;*/
+                width:100%;
+                /*border:1px solid #d3d3d3;*/
+            }
+            .queueContainer div {
+                width:100%;
+            }
+            .queueContainer .queueRulesHeader {
+                /*background-color:#d3d3d3;*/
+                padding: 2px;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            .queueContainer .queueRulesContent {
+                display: none;
+                padding : 5px;
             }
 
             #queue{
@@ -107,33 +246,33 @@
             #queueTable td{
                 height: 30px;
             }
-            
-	    #footer{
-		text-align: center;
-		background-color: #f3ede1;
-		margin-top: 1%;
-	    }
-	    
-	    #footer p{
-		padding-top: 1%;
-		padding-bottom: 1%;
-	    }
-	    
-	    #navigation{
-		width: 18%;
-		padding: 1%;
-		background-color: #f3ede1;
-		float: left;
-	    }
-	    #navigation ul{
-		list-style: none;
-		margin-left: 8%;
-	    }
-	    
-	    #main-body{
-		float: right;
-		width: 78%;
-	    }
+
+            #footer{
+                text-align: center;
+                background-color: #f3ede1;
+                margin-top: 1%;
+            }
+
+            #footer p{
+                padding-top: 1%;
+                padding-bottom: 1%;
+            }
+
+            #navigation{
+                width: 18%;
+                padding: 1%;
+                background-color: #f3ede1;
+                float: left;
+            }
+            #navigation ul{
+                list-style: none;
+                margin-left: 8%;
+            }
+
+            #main-body{
+                float: right;
+                width: 78%;
+            }
         </style>
     </head>
     <body>
@@ -160,8 +299,8 @@
             <section id="main-body">
                 <tiles:insertAttribute name="body"/>
             </section>
-	    
-	    <br clear="both"/>
+
+            <br clear="both"/>
         </div>
 
         <!-- Footer tile here -->
