@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.teamone.domain.PersonJDBCTemplate;
+import org.teamone.domain.UserJDBCTemplate;
 import org.teamone.domain.SubjectJDBCTemplate;
 
 
@@ -14,7 +14,7 @@ import org.teamone.domain.SubjectJDBCTemplate;
 public class HomeController {
     
     @Autowired
-    private PersonJDBCTemplate personJDBCTemplate;
+    private UserJDBCTemplate personJDBCTemplate;
     
     @Autowired
     private SubjectJDBCTemplate subjectJDBCTemplate;
@@ -46,7 +46,7 @@ public class HomeController {
     
     @RequestMapping("/testDatabase")
     public String testDatabase(Model model){
-	model.addAttribute("persons", personJDBCTemplate.listPerson());
+	model.addAttribute("persons", personJDBCTemplate.listUser());
 	return "testDatabase";
     }
     @RequestMapping("/testDatabase2")
@@ -55,11 +55,3 @@ public class HomeController {
 	return "testDatabase2";
     }
 }
-
-/*
- @RequestMapping("/database")
- public String databaseView( Model model){
-        model.addAttribute("varer", vareJDBCTemplate.listVare());
-        return "database";
- }
- */

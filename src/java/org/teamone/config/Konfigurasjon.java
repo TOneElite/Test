@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
 import org.springframework.web.servlet.handler.AbstractHandlerMapping;
 import org.springframework.web.servlet.view.tiles2.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles2.TilesViewResolver;
-import org.teamone.domain.PersonJDBCTemplate;
+import org.teamone.domain.UserJDBCTemplate;
 import org.teamone.domain.SubjectJDBCTemplate;
 
 @Configuration
@@ -52,8 +52,8 @@ public class Konfigurasjon extends WebMvcConfigurationSupport  {
     */
     
     @Bean
-    public PersonJDBCTemplate personJDBCTemplate(){
-	PersonJDBCTemplate personJDBCTemplate = new PersonJDBCTemplate();
+    public UserJDBCTemplate personJDBCTemplate(){
+	UserJDBCTemplate personJDBCTemplate = new UserJDBCTemplate();
 	personJDBCTemplate.setDataSource(dataSource());
 	return personJDBCTemplate;
     }
