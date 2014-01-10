@@ -1,5 +1,7 @@
 package org.teamone.domain;
 
+import java.util.ArrayList;
+
 public class User {
 
     private int id;
@@ -7,6 +9,7 @@ public class User {
     private String surname;
     private String email;
     private String password;
+	private ArrayList<UserRights> userRights;
 
     public int getId() {
         return id;
@@ -47,6 +50,15 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+	public ArrayList<UserRights> getUserRights() {
+		return userRights;
+	}
+	
+	public void addUserRights(UserRights userRight){
+		userRights.add(userRight);
+	}
+	
 
     @Override
     public String toString() {

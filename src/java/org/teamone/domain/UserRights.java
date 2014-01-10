@@ -14,6 +14,14 @@ public class UserRights {
 		this.role = role;
 	}
 	
+	public UserRights(){
+	
+	}
+
+	public void setSubject(Subject subject) {
+		this.subject = subject;
+	}
+	
 	public Subject getSubject(){
 		return subject;
 	}
