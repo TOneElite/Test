@@ -4,7 +4,7 @@ import java.util.List;
 import javax.sql.DataSource;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-public class SubjectJDBCTemplate {
+public class UserJDBCTemplate {
     
     DataSource dataSource;
     JdbcTemplate jdbcTemplateOjbect;
@@ -14,16 +14,16 @@ public class SubjectJDBCTemplate {
 	this.jdbcTemplateOjbect = new JdbcTemplate(dataSource);
     }
     
-    public Subject getSubject(int subjectCode){
+    public User getUser(int userID){
 	String SQL = "";
-	Subject subject = (Subject)jdbcTemplateOjbect.queryForObject(SQL, new Object[]{subjectCode}, new SubjectMapper());
-	return subject;
+	User user = (User)jdbcTemplateOjbect.queryForObject(SQL, new Object[]{userID}, new UserMapper());
+	return user;
     }
     
-    public List<Subject> listSubjects(){
+    public List<User> listUsers(){
 	String SQL = "";
-	List<Subject> subjects = jdbcTemplateOjbect.query(SQL, new SubjectMapper());
-	return subjects;
+	List<User> user = jdbcTemplateOjbect.query(SQL, new UserMapper());
+	return user;
     }
     
 }

@@ -9,9 +9,9 @@ public class SubjectMapper implements RowMapper<Subject> {
     @Override
     public Subject mapRow(ResultSet rs, int i) throws SQLException {
 	Subject subject = new Subject();
-	subject.setCode(rs.getInt("fagkode"));
-	subject.setName(rs.getString("fagnavn"));
-	subject.setStatus(rs.getInt("status"));
+	subject.setCode(rs.getInt(""));
+	subject.setName(rs.getString(""));
+	subject.setStatus(rs.getInt(""));
 	return subject;
     }
     
