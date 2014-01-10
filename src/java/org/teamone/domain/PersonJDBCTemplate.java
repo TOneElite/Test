@@ -20,6 +20,12 @@ public class PersonJDBCTemplate {
 	return person;
     }
     
+    public List<Person> listPerson(){
+	String SQL = "select * from person";
+	List<Person> persons = jdbcTemplateOjbect.query(SQL, new PersonMapper());
+	return persons;
+    }
+    
 }
 
 /*

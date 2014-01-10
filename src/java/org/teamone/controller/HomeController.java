@@ -41,7 +41,7 @@ public class HomeController {
     
     @RequestMapping("/testDatabase")
     public String testDatabase(Model model){
-	model.addAttribute("person", personJDBCTemplate.getPerson(123));
+	model.addAttribute("persons", personJDBCTemplate.listPerson());
 	return "testDatabase";
     }
 }
