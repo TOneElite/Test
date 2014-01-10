@@ -18,8 +18,8 @@
         <put-attribute name="body"   value="/WEB-INF/tiles/index.jsp"/>
     </definition>
     
-    <definition name="welcome" template="/WEB-INF/jsp/welcome.jsp">
-        <put-attribute name="login" value="/WEB-INF/jsp/header.jsp" />
+    <definition name="welcome" template="/WEB-INF/tiles/welcome.jsp">
+        <put-attribute name="body" value="/WEB-INF/tiles/body.jsp" />
     </definition>
     
     <definition name="databaseTest" template="/WEB-INF/tiles/DatabaseTest.jsp">
@@ -30,6 +30,7 @@
     <definition name="testDatabase" extends="databaseTest">
         <put-attribute name="body"   value="/WEB-INF/jsp/testDatabase.jsp"/>      
     </definition>
+    
     <definition name="testDatabase2" extends="databaseTest">
         <put-attribute name="body"   value="/WEB-INF/jsp/testDatabase2.jsp"/>      
     </definition>
@@ -40,11 +41,11 @@
     </definition>
     
     <definition name="login" extends="welcome">
-        <put-attribute name="body" value="/WEB-INF/jsp/login.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
     </definition>
     
     <definition name="passwordReset" extends="welcome">
-        <put-attribute name="passwordReset" value="/WEB-INF/jsp/passwordReset.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/passwordReset.jsp"/>
     </definition>
     
     <definition name="home" extends="template">

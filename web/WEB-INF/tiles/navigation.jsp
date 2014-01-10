@@ -15,4 +15,9 @@
 	<li><a href="">Datakommunikasjon</a></li>
 	<li><a href="">Realfag</a></li>
     </ul>
+    <p>Testlinker</p>
+    <ul>
+	<li><a href="testDatabase">db1</a></li>
+	<li><a href="testDatabase2">db2</a></li>
+    </ul>
 </section>
