@@ -16,7 +16,6 @@
         </style>
     </head>
     <body>
-        <tiles:insertAttribute name="loginShort"/>
-        <tiles:insertAttribute name="pass"/>
+        <tiles:insertAttribute name="body"/>
     </body>
 </html>
