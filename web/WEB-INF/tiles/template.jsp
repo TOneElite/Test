@@ -101,16 +101,16 @@
 
 
             #overlay {
-                //position: absolute;
-                // background-image: url(http://jquerytools.org/media/img/overlay/transparent.png);
+                /*position: absolute;
+                /*background-image: url(http://jquerytools.org/media/img/overlay/transparent.png);*/
 
-                //color:#efefef;
-                //height:900px;
+                /*color:#efefef;*/
+                /*height:900px;*/
             }
 
 
             div.queueContentWrap {
-                //height:900px;
+                /*height:900px;*/
             }
 
             .apple_overlay {
@@ -118,7 +118,7 @@
                 background-image:url(http://jquerytools.org/media/img/overlay/white.png);
                 width:940px;
                 padding:35px;
-                //font-size:11px; //setsthewhiteframe
+                /*font-size:11px; //setsthewhiteframe*/
             }
 
             .apple_overlay .close {
@@ -190,15 +190,15 @@
             }
 
             .queueContainer {
-                //height: 100px;
+                /*height: 100px;*/
                 width:100%;
-                //border:1px solid #d3d3d3;
+                /*border:1px solid #d3d3d3;*/
             }
             .queueContainer div {
                 width:100%;
             }
             .queueContainer .queueRulesHeader {
-                //background-color:#d3d3d3;
+                /*background-color:#d3d3d3;*/
                 padding: 2px;
                 cursor: pointer;
                 font-weight: bold;
