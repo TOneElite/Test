@@ -17,16 +17,20 @@
             <div id="queueFormForm">
                 <form>
                     <label class="queueFormLabel" for="room">Velg rom:</label>
-                    <select name="room" class="right">
+                    <select id="room" name="room" class="right">
                         <option>Labben</option>
                         <option>Polarealet</option>
+                        <option value="other">Annet</option>
                     </select><br/>
 
                     <label class="queueFormLabel" for="table">Velg bord:</label>
-                    <select name="table" class="right">
+                    <select id="table" name="table" class="right">
                         <option>Bord 1</option>
                         <option>Bord 2</option>
                     </select></br>
+
+                    <label id="hideandshow" class="queueFormLabel" for="comment">Kommentar:</label>
+                    <input id="hideandshow2" type="text" name="comment" class="right"/><br>
 
                     <label class="queueFormLabel" for="task">Velg øving:</label> 
                     <ul class="right">
@@ -70,10 +74,33 @@
 
         </section>
     </section>
-    
+
     <script language="javascript">
         $('input:checkbox').click(function() {
             $(this).parent('label').toggleClass('highlight', this.checked);
+        });
+
+        var dis1 = document.getElementById("room");
+        dis1.onchange = function() {
+            if (this.value == "other") {
+                document.getElementById("table").disabled = true;
+            }
+            else {
+                document.getElementById("table").disabled = false;
+            }
+        }
+
+        $("#hideandshow").hide();
+        $("#hideandshow2").hide();
+
+        $('#room').change(function() {
+            if ($(this).find('option:selected').val() == "other") {
+                $("#hideandshow").show();
+                $("#hideandshow2").show();
+            } else {
+                $("#hideandshow").hide();
+                $("#hideandshow2").hide();
+            }
         });
     </script>
 
