@@ -30,17 +30,17 @@ public class Konfigurasjon extends WebMvcConfigurationSupport  {
         tilesViewResolver.setOrder(2);
         return tilesViewResolver;
     }
-    /*
+    
     @Bean
     public DriverManagerDataSource dataSource(){
-        String url = "linkDB";
-        String username = "username";
-        String password = "passord";
+        String url = "jdbc:mysql://mysql.stud.aitel.hist.no:3306/14-ing2-t1";
+        String username = "14-ing2-t1";
+        String password = "3EFmbAU";
         DriverManagerDataSource dmds = new DriverManagerDataSource(url, username, password);
         dmds.setDriverClassName("com.mysql.jdbc.Driver");
         return dmds;
     }
-    
+    /*
     @Bean
     public VareJDBCTemplate vareJDBCTemplate(){
         VareJDBCTemplate vareJDBCTemplate = new VareJDBCTemplate();

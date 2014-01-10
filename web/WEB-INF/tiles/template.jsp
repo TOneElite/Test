@@ -251,8 +251,6 @@
                 text-align: center;
                 background-color: #f3ede1;
                 margin-top: 1%;
-		bottom: 0;
-		position: absolute;
             }
 
             #footer p{
