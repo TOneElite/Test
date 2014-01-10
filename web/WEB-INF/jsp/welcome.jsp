@@ -6,8 +6,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,6 +16,7 @@
         </style>
     </head>
     <body>
-        <tiles:insertAttribute name="body"/>
+        <tiles:insertAttribute name="loginShort"/>
+        <tiles:insertAttribute name="pass"/>
     </body>
 </html>
