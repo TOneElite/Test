@@ -2,4 +2,5 @@
 
 <c:forEach var="person" items="${persons}">
     <c:out value="${person.firstName}"/>
+    </br>
 </c:forEach>
