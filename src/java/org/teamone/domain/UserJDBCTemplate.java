@@ -15,7 +15,7 @@ public class UserJDBCTemplate {
     }
 
     public User getUser(int userID) {
-        String SQL = "SELECT * FROM user WHERE id=?";
+        String SQL = "SELECT * FROM user WHERE user_id=?";
         User user = (User) jdbcTemplateOjbect.queryForObject(SQL, new Object[]{userID}, new UserMapper());
         return user;
     }

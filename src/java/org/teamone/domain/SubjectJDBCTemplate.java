@@ -15,7 +15,7 @@ public class SubjectJDBCTemplate {
     }
 
     public Subject getSubject(int subjectCode) {
-        String SQL = "SELECT * FROM subject WHERE code=?";
+        String SQL = "SELECT * FROM subject WHERE subject_code=?";
         Subject subject = (Subject) jdbcTemplateOjbect.queryForObject(SQL, new Object[]{subjectCode}, new SubjectMapper());
         return subject;
     }
