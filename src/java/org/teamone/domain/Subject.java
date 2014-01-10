@@ -2,15 +2,15 @@ package org.teamone.domain;
 
 public class Subject {
 
-    private int code;
+    private String code;
     private String name;
     private int status;
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -34,6 +34,4 @@ public class Subject {
     public String toString() {
         return "Subject{" + "code=" + code + ", name=" + name + ", status=" + status + '}';
     }
-    
-    
 }

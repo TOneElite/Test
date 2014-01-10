@@ -44,7 +44,7 @@ public class SubjectTest {
 		System.out.println("getCode");
 		Subject instance = new Subject();
 		int expResult = 0;
-		int result = instance.getCode();
+		String result = instance.getCode();
 		assertEquals(expResult, result);
 		// TODO review the generated test code and remove the default call to fail.
 		fail("The test case is a prototype.");
@@ -56,7 +56,7 @@ public class SubjectTest {
 	@Test
 	public void testSetCode() {
 		System.out.println("setCode");
-		int code = 0;
+		String code = "";
 		Subject instance = new Subject();
 		instance.setCode(code);
 		// TODO review the generated test code and remove the default call to fail.

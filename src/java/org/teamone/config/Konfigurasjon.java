@@ -18,8 +18,7 @@ import org.teamone.domain.SubjectJDBCTemplate;
 @Configuration
 @EnableWebMvc  // mvc annotation
 @ComponentScan(basePackages = {"org.teamone"}) // pakken der controllerne ligger
-public class Konfigurasjon extends WebMvcConfigurationSupport  {
-
+public class Konfigurasjon extends WebMvcConfigurationSupport {
 
     @Bean
     public TilesConfigurer tilesConfigurer() {
@@ -32,9 +31,9 @@ public class Konfigurasjon extends WebMvcConfigurationSupport  {
         tilesViewResolver.setOrder(2);
         return tilesViewResolver;
     }
-    
+
     @Bean
-    public DriverManagerDataSource dataSource(){
+    public DriverManagerDataSource dataSource() {
         String url = "jdbc:mysql://mysql.stud.aitel.hist.no:3306/14-ing2-t1";
         String username = "14-ing2-t1";
         String password = "3EFmbAU";
@@ -42,34 +41,26 @@ public class Konfigurasjon extends WebMvcConfigurationSupport  {
         dmds.setDriverClassName("com.mysql.jdbc.Driver");
         return dmds;
     }
-    /*
+
     @Bean
-    public VareJDBCTemplate vareJDBCTemplate(){
-        VareJDBCTemplate vareJDBCTemplate = new VareJDBCTemplate();
-        vareJDBCTemplate.setDataSource(dataSource());
-        return vareJDBCTemplate;
+    public UserJDBCTemplate personJDBCTemplate() {
+        UserJDBCTemplate personJDBCTemplate = new UserJDBCTemplate();
+        personJDBCTemplate.setDataSource(dataSource());
+        return personJDBCTemplate;
     }
-    */
-    
+
     @Bean
-    public UserJDBCTemplate personJDBCTemplate(){
-	UserJDBCTemplate personJDBCTemplate = new UserJDBCTemplate();
-	personJDBCTemplate.setDataSource(dataSource());
-	return personJDBCTemplate;
+    public SubjectJDBCTemplate subjectJDBCTemplate() {
+        SubjectJDBCTemplate subjectJDBCTemplate = new SubjectJDBCTemplate();
+        subjectJDBCTemplate.setDataSource(dataSource());
+        return subjectJDBCTemplate;
     }
-    
-    @Bean
-    public SubjectJDBCTemplate subjectJDBCTemplate(){
-	SubjectJDBCTemplate subjectJDBCTemplate = new SubjectJDBCTemplate();
-	subjectJDBCTemplate.setDataSource(dataSource());
-	return subjectJDBCTemplate;
-    }
-    
+
     @Override
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/res/**").addResourceLocations("/res/**").setCachePeriod(31556926);
     }
-    
+
     @Override
     @Bean
     public HandlerMapping resourceHandlerMapping() {
