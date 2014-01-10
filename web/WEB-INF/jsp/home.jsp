@@ -64,30 +64,16 @@
             <th>Status</th>
             <th>Bord</th>
         </tr>
-        <tr>
-            <td>01:30</td>
-            <td>Ida Kristin Sollie Hagen</td>
-            <td>13, 14</td>
-            <td>Trenger hjelp til 13 og muligens godkjenning</td>
-            <td>Får hjelp av Helge Hafting</td>
-            <td>Labben, bord 2</td>
-        </tr>
-        <tr>
-            <td>01:30</td>
-            <td>Ida Kristin Sollie Hagen<br><span title="Her vil jeg at gruppen skal komme opp">med gruppe</span></td>
-            <td>13, 14</td>
-            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat odio eros.</td>
-            <td>Får hjelp av Arvanthan</td>
-            <td>Labben, bord 2</td>
-        </tr>
-        <tr>
-            <td>01:30</td>
-            <td>Ida Hagen</td>
-            <td>13, 14, 17</td>
-            <td>Trenger hjelp til 13 og muligens godkjenning</td>
-            <td>Utsatt</td>
-            <td>Labben, bord 2</td>
-        </tr>
+        <c:forEach var="queue" items="${queues}">
+            <tr>
+                <td><c:out value="${queue.date}"/></td>
+                <td><c:out value="${queue.users}"/></td>
+                <td><c:out value="${queue.ov}"/></td>
+                <td><c:out value="${queue.comment}"/></td>
+                <td><c:out value="${queue.status}"/></td>
+                <td><c:out value="${queue.tables}"/></td>
+            </tr>
+        </c:forEach>
     </table>
 </section>
 

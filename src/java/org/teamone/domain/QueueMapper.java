@@ -13,7 +13,7 @@ public class QueueMapper implements RowMapper<Queue> {
     @Override
     public Queue mapRow(ResultSet rs, int i) throws SQLException {
         Queue queue = new Queue();
-        queue.setId(rs.getInt("queueid"));
+        queue.setId(rs.getInt("queue_id"));
         queue.setUsers(rs.getString("users"));
         queue.setOv(rs.getString("ov"));
         queue.setComment(rs.getString("comment"));

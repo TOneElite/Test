@@ -12,6 +12,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title><tiles:insertAttribute name="title"/></title>
         <style>
+            @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
             *{
                 margin:0;
                 padding:0;
@@ -257,12 +258,22 @@
                 padding-top: 1%;
                 padding-bottom: 1%;
             }
+            
 
             #navigation{
                 width: 18%;
                 padding: 1%;
                 background-color: #f3ede1;
                 float: left;
+                font-family: "Open Sans", sans-serif;
+            }
+            #navigation a {
+                color: rgba(0, 0, 0, 0.6);
+                text-decoration: none;
+            }
+
+            #navigation a:hover, li:hover {
+                color: #000;
             }
             #navigation ul{
                 list-style: none;

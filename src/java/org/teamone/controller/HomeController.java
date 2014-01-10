@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.teamone.domain.QueueJDBCTemplate;
 import org.teamone.domain.UserJDBCTemplate;
 import org.teamone.domain.SubjectJDBCTemplate;
 
@@ -14,11 +15,21 @@ public class HomeController {
     private UserJDBCTemplate personJDBCTemplate;
     @Autowired
     private SubjectJDBCTemplate subjectJDBCTemplate;
+    @Autowired
+    QueueJDBCTemplate queueJDBCTemplate;
 
+    @RequestMapping("/*")
+    public String testView(Model model) {
+        model.addAttribute("queues", queueJDBCTemplate.listQueue());
+        return "home";
+    }
+    /*
+     * 
     @RequestMapping("/*")
     public String testView() {
         return "home";
     }
+     */
 
     @RequestMapping("/password")
     public String passView() {
