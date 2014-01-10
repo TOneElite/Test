@@ -12,11 +12,24 @@
         <title>JSP Page</title>
         <style>
             *{
-                background-color: red;
+                margin:0;
+                padding:0;
             }
+
+            #logo{
+                font-size: 4em;
+                font-family: "mekanik let", arial;
+                display: inline;
+            }
+
         </style>
     </head>
     <body>
-        <h1>Hello World! HEIIII</h1>
-    </body>
+        <div id="logo">SKS 2.0</div>
+    <form:form method="post" modelAttribute="changePass" action="changePass">
+        <br><label>Epost:</label>
+        <form:input path="oldPass" />
+        <form:errors path="oldPass" />
+    </form:form>
+</body>
 </html>
