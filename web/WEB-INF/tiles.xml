@@ -5,7 +5,7 @@
        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 
 <tiles-definitions>
-    
+    <!-- ************************ Templates start ******************************** -->
     <definition name="template" template="/WEB-INF/tiles/template.jsp">
         <put-attribute name="title" value="Template"/>
         <put-attribute name="body" value="/WEB-INF/tiles/body.jsp"/>
@@ -18,13 +18,22 @@
         <put-attribute name="body"   value="/WEB-INF/tiles/index.jsp"/>
     </definition>
     
+    <definition name="welcome" template="/WEB-INF/jsp/welcome.jsp">
+        <put-attribute name="login" value="/WEB-INF/jsp/header.jsp" />
+    </definition>
+    
+    <definition name="databaseTest" template="/WEB-INF/tiles/DatabaseTest.jsp">
+	<put-attribute name="body" value="/WEB-INF/jsp/testDatabase.jsp"/>
+    </definition>
+    <!-- ************************ Templates end ******************************** -->
+    
+    <definition name="testDatabase" extends="databaseTest">
+        <put-attribute name="body"   value="/WEB-INF/jsp/testDatabase.jsp"/>      
+    </definition>
+    
     <definition name="queueOverlay" extends="overlaying">
         <put-attribute name="title"  value="The Product Store"/>
         <put-attribute name="body"   value="/WEB-INF/jsp/queueOverlay.jsp"/>      
-    </definition>
-    
-    <definition name="welcome" template="/WEB-INF/jsp/welcome.jsp">
-        <put-attribute name="login" value="/WEB-INF/jsp/header.jsp" />
     </definition>
     
     <definition name="login" extends="welcome">
