@@ -1,12 +1,17 @@
 package org.teamone.controller;
 
+import java.util.List;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.teamone.domain.QueueJDBCTemplate;
 import org.teamone.domain.UserJDBCTemplate;
 import org.teamone.domain.SubjectJDBCTemplate;
+import org.teamone.domain.Queue;
 
 @Controller
 public class HomeController {
@@ -25,10 +30,10 @@ public class HomeController {
     }
     /*
      * 
-    @RequestMapping("/*")
-    public String testView() {
-        return "home";
-    }
+     @RequestMapping("/*")
+     public String testView() {
+     return "home";
+     }
      */
 
     @RequestMapping("/password")
@@ -62,8 +67,20 @@ public class HomeController {
         model.addAttribute("subjects", subjectJDBCTemplate.listSubjects());
         return "testDatabase2";
     }
+
+    @RequestMapping("/teacherQueue")
+    public String teacherQueue(Model model) {
+        model.addAttribute("queues", queueJDBCTemplate.listQueue());
+        return "teacherQueue";
+    }
+
+    @RequestMapping("/approveInQueue")
+    public String approveInQueue() {
+        return "approveInQueue";
+    }
+
     @RequestMapping("/eksamensrapport")
-    public String examOverview(){
+    public String examOverview() {
         return "eksamensrapport";
     }
 }
