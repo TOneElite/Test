@@ -17,15 +17,11 @@
 
 <section id="queueHeader">
     <div id="queueInfo">                         
-        <h1>Øvinger i Matematikk 2</h1>
-        <p>1 <span id="mandatory">2</span> <span id="accepted">3 4 5</span> 6 7 8 9 10 <span id="mandatory"><span id="accepted">11</span></span> 12 13 14 15 16 17 18 19</p>
+        <h1>Kø for Matematikk 2</h1>        
     </div>
 
-
     <div>         
-        <a href="<c:url value="queueOverlay.htm"/>" rel="#overlay">
-            <button id="queueButton" type="button">Stå i kø</button>
-        </a>
+        <button id="queueButton" type="button">Start køen</button>
     </div>
 
     <div class="apple_overlay" id="overlay">
@@ -62,16 +58,24 @@
             <th>Øving(er)</th>
             <th>Kommentar</th>
             <th>Status</th>
-            <th>Bord</th>
+            <th>Plass</th>
+            <th></th>
         </tr>
         <c:forEach var="queue" items="${queues}">
-            <tr>
+            <tr id="row">
                 <td><c:out value="${queue.date}"/></td>
                 <td><c:out value="${queue.users}"/></td>
                 <td><c:out value="${queue.ov}"/></td>
                 <td><c:out value="${queue.comment}"/></td>
                 <td><c:out value="${queue.status}"/></td>
                 <td><c:out value="${queue.tables}"/></td>
+                <td>
+                    <input id=help" type="button" value="Hjelp">
+                    <input type="button" value="Utsett">
+                    <a href="approveInQueue">
+                        <button id="btnApprove" type="button">Godkjenn</button>
+                    </a>
+                    <input type="button" value="Fjern"></td>
             </tr>
         </c:forEach>
     </table>
@@ -94,23 +98,17 @@
         });
     });
 
-    $(function() {
 
-        // if the function argument is given to overlay,
-        // it is assumed to be the onBeforeLoad event listener
-        $("a[rel]").overlay({
-            mask: 'lightgrey',
-            effect: 'apple',
-            onBeforeLoad: function() {
+    $("#queueButton").on("click", function() {
+        if ($(this).text() == "Start køen")
+        {
+            $(this).text("Steng køen");
+        } else {
+            $(this).text("Start køen");
+        }
+        $(".ISProductBody").toggle();
 
-                // grab wrapper element inside content
-                var wrap = this.getOverlay().find(".queueContentWrap");
-
-                // load the page specified in the trigger
-                wrap.load(this.getTrigger().attr("href"));
-            }
-
-        });
+        return false;
     });
 </script> 
 
