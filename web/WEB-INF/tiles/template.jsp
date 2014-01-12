@@ -247,7 +247,7 @@
             #queueTable td{
                 height: 30px;
             }
-
+            
             #footer{
                 text-align: center;
                 background-color: #f3ede1;
