@@ -23,7 +23,7 @@
     </definition>
     
     <definition name="databaseTest" template="/WEB-INF/tiles/DatabaseTest.jsp">
-	<put-attribute name="body" value="/WEB-INF/jsp/testDatabase.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/jsp/testDatabase.jsp"/>
     </definition>
     <!-- ************************ Templates end ******************************** -->
     
@@ -33,6 +33,14 @@
     
     <definition name="testDatabase2" extends="databaseTest">
         <put-attribute name="body"   value="/WEB-INF/jsp/testDatabase2.jsp"/>      
+    </definition>
+    
+    <definition name="teacherQueue" extends="template">
+        <put-attribute name="body"   value="/WEB-INF/jsp/teacherQueue.jsp"/>      
+    </definition>
+    
+    <definition name="approveInQueue" extends="template">
+        <put-attribute name="body"   value="/WEB-INF/jsp/approveInQueue.jsp"/>      
     </definition>
     
     <definition name="queueOverlay" extends="overlaying">
