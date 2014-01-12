@@ -53,9 +53,10 @@
         <col width="6%">
         <col width="16%">
         <col width="10%">
-        <col width="28%">
-        <col width="18%">
-        <col width="16%">
+        <col width="20%">
+        <col width="15%">
+        <col width="10%">
+        <col width="15%">
         <tr>
             <th>Tid</th>
             <th>Navn</th>
@@ -63,6 +64,7 @@
             <th>Kommentar</th>
             <th>Status</th>
             <th>Bord</th>
+            <th></th>
         </tr>
         <c:forEach var="queue" items="${queues}">
             <tr>
@@ -72,6 +74,7 @@
                 <td><c:out value="${queue.comment}"/></td>
                 <td><c:out value="${queue.status}"/></td>
                 <td><c:out value="${queue.tables}"/></td>
+                <td><button type="button">Fjern</button><button type="button">Utsett</button></td>
             </tr>
         </c:forEach>
     </table>
