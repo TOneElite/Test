@@ -51,11 +51,6 @@ public class HomeController {
         return "passwordReset";
     }
 
-    @RequestMapping(value = "queueOverlay.htm")
-    public String overlay() {
-        return "queueOverlay";
-    }
-
     @RequestMapping("/testDatabase")
     public String testDatabase(Model model) {
         model.addAttribute("persons", personJDBCTemplate.listUsers());

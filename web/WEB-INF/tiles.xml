@@ -14,10 +14,6 @@
         <put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"/>
     </definition>
     
-    <definition name="overlaying" template="/WEB-INF/tiles/empty.jsp">
-        <put-attribute name="body"   value="/WEB-INF/tiles/index.jsp"/>
-    </definition>
-    
     <definition name="welcome" template="/WEB-INF/tiles/welcome.jsp">
         <put-attribute name="body" value="/WEB-INF/tiles/body.jsp" />
     </definition>
@@ -41,11 +37,6 @@
     
     <definition name="approveInQueue" extends="template">
         <put-attribute name="body"   value="/WEB-INF/jsp/approveInQueue.jsp"/>      
-    </definition>
-    
-    <definition name="queueOverlay" extends="overlaying">
-        <put-attribute name="title"  value="The Product Store"/>
-        <put-attribute name="body"   value="/WEB-INF/jsp/queueOverlay.jsp"/>      
     </definition>
     
     <definition name="login" extends="welcome">

@@ -105,7 +105,7 @@
                 z-index:10000;
                 background-color:#333;
                 width:70%;
-                height:80%;
+                height:75%;
                 -moz-box-shadow:0 0 90px 5px gray;
                 -webkit-box-shadow: 0 0 90px gray;
             }
@@ -173,8 +173,8 @@
             }
 
             #queueForm textarea {
-                width: 260px; 
-                height: 170px; 
+                width: 240px; 
+                height: 130px; 
                 padding: 12px 20px 0px 20px; 
                 margin: 0 0 20px 0; 
                 border: 0;
@@ -207,7 +207,7 @@
                 line-height: 1;
                 border: 0;
                 border-radius: 0px;
-                height: 37px;
+                height: 45px;
                 -webkit-appearance: none; -moz-appearance: none;
                 text-indent: 0.01px;
                 text-overflow: '';
@@ -225,7 +225,7 @@
 
             #queueForm .styledSelect {  
                 width: 205px;
-                height: 37px;
+                height: 45px;
                 overflow: hidden; 
                 background: url('res/arrow.jpg') no-repeat right #f8f8f8;
                 border-radius: 7px;    

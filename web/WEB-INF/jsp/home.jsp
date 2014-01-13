@@ -68,6 +68,7 @@
                     <label for="group">Gruppe:</label>
                     <div class="styledSelect">
                         <select id="group" class="queueFormMiddle">
+                            <option>- Velg -</option>
                             <option>Tom</option>
                             <option>Ole</option>
                             <option>Andreas</option>
