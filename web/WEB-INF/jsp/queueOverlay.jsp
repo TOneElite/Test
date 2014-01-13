@@ -1,111 +1,96 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
-
-
-<!-- the NewContact Screen -->
+<!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8" />
+        <title>Stå i kø</title>
+
+        <link href="resources/css/styles.css" rel="stylesheet" type="text/css" media="screen" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <title> StÃ¥ i kÃ¸</title>
     </head>
 
+
     <body>
-    <section id="queueForm">
-        <section id="queueFormLeft">
-            <div id="queueFormForm">
-                <form>
-                    <label class="queueFormLabel" for="room">Velg rom:</label>
-                    <select id="room" name="room" class="right">
-                        <option>Labben</option>
-                        <option>Polarealet</option>
-                        <option value="other">Annet</option>
-                    </select><br/>
 
-                    <label class="queueFormLabel" for="table">Velg bord:</label>
-                    <select id="table" name="table" class="right">
-                        <option>Bord 1</option>
-                        <option>Bord 2</option>
-                    </select></br>
+        <div id="queueForm">
+            <section id="queueFormLeft">
+            <h1>Stå i kø</h1>
+            <form action="#" method="post">
 
-                    <label id="hideandshow" class="queueFormLabel" for="comment">Kommentar:</label>
-                    <input id="hideandshow2" type="text" name="comment" class="right"/><br>
+                    <label for="room">Rom:</label>  
+                    <div class="styledSelect">
+                        <select id="room" class="queueFormMiddle">
+                            <option>Labben</option>
+                            <option>Polarealet i første</option>
+                            <option value="other">Annet</option>
+                        </select>
+                    </div><br>
 
-                    <label class="queueFormLabel" for="task">Velg Ã¸ving:</label> 
-                    <ul class="right">
-                        <li><label class="checkboxLabel">Ã˜ving 1<input type="checkbox" name="task" value="Ã˜ving 1"></label></li>
-                        <li><label class="checkboxLabel">Ã˜ving 2<input type="checkbox" name="task" value="Ã˜ving 2" checked></label></li>
-                        <li><label class="checkboxLabel">Ã˜ving 3<input type="checkbox" name="task" value="Ã˜ving 3"></label></li>
-                        <li><label class="checkboxLabel">Ã˜ving 14<input type="checkbox" name="task" value="Ã˜ving 14"></label></li>
-                        <li><label class="checkboxLabel">Ã˜ving 15<input type="checkbox" name="task" value="Ã˜ving 15"></label></li>
-                        <li><label class="checkboxLabel">Ã˜ving 16<input type="checkbox" name="task" value="Ã˜ving 15"></label></li>
-                        <li><label class="checkboxLabel">Ã˜ving 17<input type="checkbox" name="task" value="Ã˜ving 15"></label></li>
-                    </ul><br/>
+                    <label for="table">Bord:</label>
+                    <div class="styledSelect">
+                        <select id="table" class="queueFormMiddle">
+                            <option>Bord 1</option>
+                            <option>Bord 2</option>
+                            <option>Bord 3</option>
+                        </select>
+                    </div><br>                           
+                    
+                    <div id="queueFormCeckboxes">
+                        <label class="queueFormLabel" for="task">Øving:</label>
+                        <ul class="queueFormMiddle">
+                            <li><label class="checkboxLabel">Øving 1<input class="boxes" type="checkbox" name="task" value="Øving 1"></label></li>
+                            <li><label class="checkboxLabel">Øving 2<input class="boxes" type="checkbox" name="task" value="Øving 2"></label></li>
+                            <li><label class="checkboxLabel">Øving 3<input class="boxes" type="checkbox" name="task" value="Øving 3"></label></li>
+                            <li><label class="checkboxLabel">Øving 14<input class="boxes" type="checkbox" name="task" value="Øving 14"></label></li>
+                            <li><label class="checkboxLabel">Øving 15<input class="boxes" type="checkbox" name="task" value="Øving 15"></label></li>
+                            <li><label class="checkboxLabel">Øving 16<input class="boxes" type="checkbox" name="task" value="Øving 15"></label></li>
+                            <li><label class="checkboxLabel">Øving 17<input class="boxes" type="checkbox" name="task" value="Øving 15"></label></li>
+                        </ul>
+                    </div> <br>
+                    
+                      <label for="group">Gruppe:</label>
+                    <div class="styledSelect">
+                        <select id="group" class="queueFormMiddle">
+                            <option>Velg</option>
+                            <option>Tom</option>
+                            <option>Ole</option>
+                            <option>Andreas</option>
+                        </select>
+                    </div><br>
+                    
+                    <label for="comment">Kommentar:</label>
+                    <textarea id="comment" class="queueFormMiddle"></textarea>
+                    <br>
+                    
+                    <input class="middle" id="cancelbutton" type="button" value="Avbryt" />
+                    <input class="middle" id="okbutton" type="submit" value="OK" />
 
-                    <label class="queueFormLabel" for="group">Velg gruppe:</label>
-                    <select name="group" class="right">
-                        <option>Tom</option>
-                        <option>Andreas</option>
-                    </select><br/>
-
-                    <label class="queueFormLabel" for="comment">Kommentar:</label><br>
-                    <input type="text" name="comment" id="comment" /><br/>
-
-                    <input type="submit" value="OK"/>
-                    <input type="button" value="Avbryt"/><br/>
-                </form>
+            </form>
+            <section>
+            
+            <div id="queueFormRight">
+                Dette er høyre
             </div>
-        </section>
+        </div>
 
-        <section queueFormRight>
-            <div id="queueFormMap">
-                <img src="https://sks.stud.aitel.hist.no:8443/bilder/lab2.png" alt="kart" id="queueFormThemap">
-            </div>
-            <div id="queueFormGroupMembers">
-
-                Her skal alle medlemmene i gruppa komme opp<br>
-                Ida<br>
-                Tom<br>
-                Andreas<br>
-                Ã˜ystein<br>
-            </div>
-
-
-        </section>
-    </section>
-
-    <script language="javascript">
-        $('input:checkbox').click(function() {
-            $(this).parent('label').toggleClass('highlight', this.checked);
-        });
-
+            <script language="javascript">
         var dis1 = document.getElementById("room");
         dis1.onchange = function() {
             if (this.value == "other") {
                 document.getElementById("table").disabled = true;
+                document.getElementById("table").className += " disabled";
             }
             else {
                 document.getElementById("table").disabled = false;
+                document.getElementById("table").className -= " disabled";
             }
         }
-
-        $("#hideandshow").hide();
-        $("#hideandshow2").hide();
-
-        $('#room').change(function() {
-            if ($(this).find('option:selected').val() == "other") {
-                $("#hideandshow").show();
-                $("#hideandshow2").show();
-            } else {
-                $("#hideandshow").hide();
-                $("#hideandshow2").hide();
-            }
-        });
     </script>
+        <!--
+        <script language="javascript">
 
-</body>
+            $('input:checkbox').click(function() {
+                $(this).parent('label').toggleClass('highlight', this.checked);
+            }); 
+        </script> -->
+    </body>
 </html>
-
-
-
-
